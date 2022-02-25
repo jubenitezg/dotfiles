@@ -1,0 +1,48 @@
+- defaults:
+    link:
+      relink: true
+      create: true
+    shell:
+      quiet: true
+
+- shell:
+    - 
+      command: scripts/utils/logo.sh -d
+      description: "" 
+      stdout: true
+    - 
+      command: scripts/pre-install.sh
+      description: "Setting up oh-my-zsh, brew & tools"
+      stdout: true
+      stdin: true
+
+- clean: ['~']
+
+- link:
+    ~/.ideavimrc: ideavimrc
+    ~/.zshrc:
+      path: zshrc
+      force: true
+    ~/.gitconfig: gitconfig
+    ~/.gitignore_global: gitignore_global
+    ~/.p10k.zsh: p10k.zsh
+    ~/.zprofile: zprofile
+    ~/.config/nvim:
+      path: config/nvim
+
+- shell:
+    - 
+      command: scripts/setup-mac.sh
+      description: "Setting up Mac configurations, some configurations may require a reboot"
+    - 
+      command: scripts/setup-nvim.sh
+      description: "Setting up nvim configurations"
+      stdout: true
+    - 
+      command: scripts/setup-git.sh
+      description: "Setting up git configurations"
+    - 
+      command: scripts/install-extra.sh
+      description: "Installing extra tools"
+      stdout: true
+
