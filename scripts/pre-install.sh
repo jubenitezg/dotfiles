@@ -19,6 +19,25 @@ install_brew_and_tools() {
   fi
 }
 
+create_backup() {
+  echo "Creating dotfiles backup"
+  local dotfiles=".zshrc"
+  for dotfile in ${dotfiles}
+  do
+    file="${HOME}/$dotfile"
+    if [ -f $file ]; then
+      mv $file "$file.pre-dot"
+    fi
+  done
+}
+
+while getopts ":b" option; do
+  case $option in
+    b)
+      create_backup
+  esac
+done
+
 install_oh_my_zsh
 install_brew_and_tools
 

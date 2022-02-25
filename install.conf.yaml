@@ -11,7 +11,7 @@
       description: "" 
       stdout: true
     - 
-      command: scripts/pre-install.sh
+      command: scripts/pre-install.sh -b
       description: "Setting up oh-my-zsh, brew & tools"
       stdout: true
       stdin: true
