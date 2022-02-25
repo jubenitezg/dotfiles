@@ -1,0 +1,11 @@
+# This is Git's per-user configuration file.
+[user]
+        name = JulianBenitez
+        email = julian.benitezg99@gmail.com
+[pull]
+        rebase = false
+[init]
+        defaultBranch = master
+[core]
+	excludesfile = ~/.gitignore_global
+	editor = nvim
