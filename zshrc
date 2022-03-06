@@ -77,7 +77,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git macos web-search copydir copyfile copybuffer aliases alias-finder)
+plugins=(git macos web-search copypath copyfile copybuffer aliases alias-finder)
 
 source $ZSH/oh-my-zsh.sh
 
