@@ -40,6 +40,10 @@ brew "python@3.9"
 brew "ripgrep"
 # Text interface for Git repositories
 brew "tig"
+# Terminal multiplexer
+brew "tmux"
+# UNIX shell (command interpreter)
+brew "zsh"
 # Fish-like fast/unobtrusive autosuggestions for zsh
 brew "zsh-autosuggestions"
 # Fish shell like syntax highlighting for zsh
