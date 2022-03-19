@@ -1,5 +1,10 @@
-if [ -n "$PS1" ] && [ -z "$TMUX" ]; then
-  tmux new-session -A -s main
+#if [ -n "$PS1" ] && [ -z "$TMUX" ]; then
+#  tmux new-session -A -s main
+#fi
+if [ "$TERMINAL_EMULATOR" != "JetBrains-JediTerm" ] && [ -n "$PS1" ] && [ -z "$TMUX" ]; then
+    ZSH_TMUX_AUTOSTART=true
+    ZSH_TMUX_AUTOCONNECT=false
+    tmux new-session -A -s main
 fi
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
@@ -149,9 +154,6 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
-# No signoff
-export GIT_TOGETHER_NO_SIGNOFF=1
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
