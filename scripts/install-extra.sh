@@ -14,6 +14,14 @@ install_extras() {
 
   echo "Installing typescript"
   npm install -g typescript typescript-language-server > /dev/null
+
+  echo "Installing powerline-status"
+  pip install --user powerline-status > /dev/null
+
+  echo "Installing tmux powerline"
+  git clone git@github.com:erikw/tmux-powerline.git ~/.tmux-powerline
+  rm ~/.tmux-powerline/themes/default.sh
+  ln -s ~/.dotfiles/tmux/default.sh ~/.tmux-powerline/themes/default.sh
 }
 
 install_extras
