@@ -29,6 +29,8 @@
     ~/.zprofile: zprofile
     ~/.config/nvim:
       path: config/nvim
+    ~/.tmux.conf:
+      path: tmux/tmux.conf
 
 - shell:
     - 
