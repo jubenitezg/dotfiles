@@ -1,14 +1,9 @@
-#if [ -n "$PS1" ] && [ -z "$TMUX" ]; then
-#  tmux new-session -A -s main
-#fi
 if [ "$TERMINAL_EMULATOR" != "JetBrains-JediTerm" ] && [ -n "$PS1" ] && [ -z "$TMUX" ]; then
     ZSH_TMUX_AUTOSTART=true
     ZSH_TMUX_AUTOCONNECT=false
     tmux new-session -A -s main
-fi
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
+fi 
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc. Initialization code that may require console input (password prompts, [y/n] confirmations, etc.) must go above this block; everything else may go below.
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
@@ -85,7 +80,18 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git macos web-search copypath copyfile copybuffer aliases alias-finder)
+plugins=(
+  git
+  macos
+  web-search
+  copypath
+  copyfile
+  copybuffer
+  aliases
+  alias-finder
+  fasd
+  fzf
+)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -110,7 +116,6 @@ source $ZSH/oh-my-zsh.sh
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
-
 
 # Brew plugins
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
@@ -146,9 +151,6 @@ export CARGO_HOME="${HOME}/.cargo"
 
 # Vim / Nvim
 alias vim="nvim"
-
-# Yarn
-export PATH="$PATH:$(yarn global bin)"
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh" || true
 
