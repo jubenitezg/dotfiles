@@ -6,6 +6,12 @@ tap "pivotal/tap"
 tap "romkatv/powerlevel10k"
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
+# GNU File, Shell, and Text utilities
+brew "coreutils"
+# Command-line tool to interact with exercism.io
+brew "exercism"
+# CLI tool for quick access to files and directories
+brew "fasd"
 # Simple, fast and user-friendly alternative to find
 brew "fd"
 # Banner-like program prints strings as ASCII art
@@ -20,6 +26,10 @@ brew "gh"
 brew "git"
 # Open source programming language to build simple/reliable/efficient software
 brew "go"
+# Version Control Visualization Tool
+brew "gource"
+# GNU grep, egrep and fgrep
+brew "grep"
 # Lightweight and flexible command-line JSON processor
 brew "jq"
 # Just-In-Time Compiler (JIT) for the Lua programming language
