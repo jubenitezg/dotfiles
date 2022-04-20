@@ -12,6 +12,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
 Plug 'cohama/lexima.vim' " Autoclose pairs
 Plug 'morhetz/gruvbox'
+Plug 'udalov/kotlin-vim'
 
 if has("nvim")
     " Plug 'neoclide/coc.nvim', {'branch': 'release'} " Conquer of Completion
