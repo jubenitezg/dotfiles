@@ -22,6 +22,10 @@ install_extras() {
   git clone git@github.com:erikw/tmux-powerline.git ~/.tmux-powerline
   rm ~/.tmux-powerline/themes/default.sh
   ln -s ~/.dotfiles/tmux/default.sh ~/.tmux-powerline/themes/default.sh
+
+  echo "Installing Poetry tab completion"
+  mkdir $ZSH_CUSTOM/plugins/poetry
+  poetry completions zsh > $ZSH_CUSTOM/plugins/poetry/_poetry
 }
 
 install_extras
