@@ -74,6 +74,8 @@ cask "discord"
 cask "docker"
 # Web browser
 cask "firefox"
+# Git client focusing on productivity
+cask "gitkraken"
 # Terminal emulator as alternative to Apple's Terminal app
 cask "iterm2"
 # JetBrains tools manager
