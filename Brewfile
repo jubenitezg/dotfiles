@@ -20,6 +20,8 @@ brew "figlet"
 brew "fzf"
 # GNU compiler collection
 brew "gcc"
+# WebDriver <-> Marionette proxy
+brew "geckodriver"
 # GitHub command-line tool
 brew "gh"
 # Distributed revision control system
@@ -68,6 +70,8 @@ cask "adoptopenjdk11"
 cask "adoptopenjdk16"
 # AdoptOpenJDK OpenJDK (Java) Development Kit
 cask "adoptopenjdk8"
+# Transfer files from and to an Android smartphone
+cask "android-file-transfer"
 # Voice and text chat software
 cask "discord"
 # App to build and share containerized applications and microservices

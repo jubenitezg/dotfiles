@@ -91,6 +91,7 @@ plugins=(
   alias-finder
   fasd
   fzf
+  poetry
 )
 
 source $ZSH/oh-my-zsh.sh
