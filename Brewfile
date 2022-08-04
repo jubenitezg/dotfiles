@@ -8,6 +8,8 @@ tap "romkatv/powerlevel10k"
 brew "bat"
 # GNU File, Shell, and Text utilities
 brew "coreutils"
+# Bash Automated Testing System
+brew "bats-core"
 # Command-line tool to interact with exercism.io
 brew "exercism"
 # CLI tool for quick access to files and directories
@@ -84,6 +86,8 @@ cask "gitkraken"
 cask "iterm2"
 # JetBrains tools manager
 cask "jetbrains-toolbox"
+# Reverse proxy, secure introspectable tunnels to localhost
+cask "ngrok"
 # Calculator and converter application
 cask "numi"
 # Knowledge base that works on top of a local folder of plain text Markdown files
