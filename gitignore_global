@@ -26,5 +26,3 @@
 ehthumbs.db
 Thumbs.db
 
-
-# git config --global core.excludesfile ~/.gitignore_global
