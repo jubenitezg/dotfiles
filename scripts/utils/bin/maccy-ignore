@@ -1,0 +1,12 @@
+#!/bin/bash
+
+VSET="${1}"
+
+if [ "${VSET}" != "true" ] && [ "${VSET}" != "false" ]; then
+  echo "'${VSET}' is not a valid value"
+  exit 1
+fi
+
+defaults write org.p0deje.Maccy ignoreEvents "${VSET}"
+echo "Set Maccy ignoreEvents to '${VSET}'"
+
