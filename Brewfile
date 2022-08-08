@@ -86,6 +86,8 @@ cask "gitkraken"
 cask "iterm2"
 # JetBrains tools manager
 cask "jetbrains-toolbox"
+# Clipboard manager
+cask "maccy"
 # Reverse proxy, secure introspectable tunnels to localhost
 cask "ngrok"
 # Calculator and converter application

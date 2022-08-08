@@ -150,6 +150,10 @@ export RUSTUP_HOME="${HOME}/.rustup"
 export CARGO_HOME="${HOME}/.cargo"
 # added to path by .zshenv
 
+# Custom scripts
+export PATH="${PATH}:${HOME}/.dotfiles/scripts/utils/bin"
+alias mc-ig="maccy-ignore"
+
 # Vim / Nvim
 alias vim="nvim"
 
