@@ -135,8 +135,8 @@ alias java8='export JAVA_HOME=$JAVA_8_HOME'
 alias java11='export JAVA_HOME=$JAVA_11_HOME'
 alias java16='export JAVA_HOME=$JAVA_16_HOME'
 
-# Default to Java 16
-java16
+# Default to Java 11
+java11
 
 # Go
 export GOPATH=$(go env GOPATH)

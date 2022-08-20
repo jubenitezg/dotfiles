@@ -27,6 +27,8 @@
     ~/.gitignore_global: gitignore_global
     ~/.p10k.zsh: p10k.zsh
     ~/.zprofile: zprofile
+      path: zprofile
+      force: true
     ~/.config/nvim:
       path: config/nvim
     ~/.tmux.conf:
