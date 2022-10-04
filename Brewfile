@@ -5,12 +5,18 @@ tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/core"
 tap "romkatv/powerlevel10k"
+# Official Amazon AWS command-line interface
+brew "awscli"
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
 # GNU File, Shell, and Text utilities
 brew "coreutils"
 # Bash Automated Testing System
 brew "bats-core"
+# Collection of portable C++ source libraries
+brew "boost"
+# Simple command-line tool for creating clusters on Amazon EKS
+brew "eksctl"
 # Command-line tool to interact with exercism.io
 brew "exercism"
 # CLI tool for quick access to files and directories
@@ -37,10 +43,14 @@ brew "gource"
 brew "grep"
 # Lightweight and flexible command-line JSON processor
 brew "jq"
+# Kubernetes command-line interface
+brew "kubernetes-cli"
 # Just-In-Time Compiler (JIT) for the Lua programming language
 brew "luajit", args: ["HEAD"]
 # Java-based project management
 brew "maven"
+# Fast, highly customisable system info script
+brew "neofetch"
 # Parser generator tool and incremental parsing library
 brew "tree-sitter"
 # Ambitious Vim-fork focused on extensibility and agility
