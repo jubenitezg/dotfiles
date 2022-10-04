@@ -118,15 +118,17 @@ source $ZSH/oh-my-zsh.sh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 
-# Brew plugins
+# ========== Brew plugins ==========
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 # ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=23'
+# ==================================
 
-# pk10 theme
+# ========== pk10 theme ==========
 source /opt/homebrew/opt/powerlevel10k/powerlevel10k.zsh-theme
+# ================================
 
-# Java 
+# ========== Java ========== 
 export JAVA_8_HOME=$(/usr/libexec/java_home -v1.8)
 export JAVA_11_HOME=$(/usr/libexec/java_home -v11)
 export JAVA_16_HOME=$(/usr/libexec/java_home -v16)
@@ -135,27 +137,36 @@ alias java8='export JAVA_HOME=$JAVA_8_HOME'
 alias java11='export JAVA_HOME=$JAVA_11_HOME'
 alias java16='export JAVA_HOME=$JAVA_16_HOME'
 
-# Default to Java 11
 java11
+# ==========================
 
-# Go
+# ========= Go =========
 export GOPATH=$(go env GOPATH)
 export GOBIN=$GOPATH/bin
 export PATH=$PATH:$GOBIN
 export GOOS="darwin"
 export GOARCH="arm64"
+# ======================
 
-# Rust
+# ========= Rust =========
 export RUSTUP_HOME="${HOME}/.rustup"
 export CARGO_HOME="${HOME}/.cargo"
 # added to path by .zshenv
+# ========================
 
-# Custom scripts
+# ========= Custom scripts =========
 export PATH="${PATH}:${HOME}/.dotfiles/scripts/utils/bin"
 alias mc-ig="maccy-ignore"
+# ==================================
 
-# Vim / Nvim
+# ========= Vim / Nvim =========
 alias vim="nvim"
+# ==============================
+
+# ========= AWS CLI =========
+autoload bashcompinit && bashcompinit
+autoload -Uz compinit && compinit
+# ===========================
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh" || true
 
