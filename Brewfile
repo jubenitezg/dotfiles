@@ -39,6 +39,8 @@ brew "git"
 brew "go"
 # Version Control Visualization Tool
 brew "gource"
+# Graph visualization software from AT&T and Bell Labs
+brew "graphviz"
 # GNU grep, egrep and fgrep
 brew "grep"
 # Lightweight and flexible command-line JSON processor
