@@ -168,6 +168,23 @@ autoload bashcompinit && bashcompinit
 autoload -Uz compinit && compinit
 # ===========================
 
+# ========= Graphviz =========
+export GRAPHVIZ_DOT=$(which dot)
+# ============================
+
+
+# ========= Docker =========
+# For building docker on Mac M1
+docker() {
+  if [[ `uname -m` == "arm64" ]] && [[ "$1" == "run" || "$1" == "build" ]]; then
+    /usr/local/bin/docker "$1" --platform linux/amd64 "${@:2}"
+  else
+    /usr/local/bin/docker "$@"
+  fi
+}
+
+# ==========================
+
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh" || true
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
