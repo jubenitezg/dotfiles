@@ -53,4 +53,10 @@
       command: scripts/vscode/extensions.sh
       description: "Installing vscode extensions"
       stdout: true
+    - 
+      command: scripts/get-tokens.sh
+      description: "Get all available tokens"
+      stdout: true
+      stdin: true
+
 
