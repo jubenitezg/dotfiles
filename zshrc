@@ -183,7 +183,14 @@ docker() {
   fi
 }
 
+# CLEAN
+# docker system prune -a --volumes
+
 # ==========================
+
+# ====== Tokens ======
+source ~/.tokens.sh
+# ====================
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh" || true
 
