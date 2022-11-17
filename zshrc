@@ -1,20 +1,37 @@
-if [ "$TERMINAL_EMULATOR" != "JetBrains-JediTerm" ] && [ -n "$PS1" ] && [ -z "$TMUX" ]; then
-    ZSH_TMUX_AUTOSTART=true
-    ZSH_TMUX_AUTOCONNECT=false
-    tmux new-session -A -s main
+if [ "$TERMINAL_EMULATOR" != "JetBrains-JediTerm" ] && [ "$TERM_PROGRAM" != "WarpTerminal" ] && [ -n "$PS1" ] && [ -z "$TMUX" ]; then
+  ZSH_TMUX_AUTOSTART=true
+  ZSH_TMUX_AUTOCONNECT=false
+  tmux new-session -A -s main
 fi 
 
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+if [[ "$TERM_PROGRAM" != "WarpTerminal" ]]; then
+  
+  if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+    source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+  fi
+
+  export ZSH="$HOME/.oh-my-zsh"
+
+  ZSH_THEME="robbyrussell"
+  source $ZSH/oh-my-zsh.sh
+
+  # ========== Brew plugins ==========
+  source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+  source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+  # ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=23'
+  # ==================================
+
+  # ========== pk10 theme ==========
+  source /opt/homebrew/opt/powerlevel10k/powerlevel10k.zsh-theme
+  # ================================
+
+  test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh" || true
+
+  # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+  [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 fi
 
-export ZSH="$HOME/.oh-my-zsh"
 
-ZSH_THEME="robbyrussell"
-
-# Standard plugins can be found in $ZSH/plugins/
-# Custom plugins may be added to $ZSH_CUSTOM/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git
@@ -35,15 +52,6 @@ source $ZSH/oh-my-zsh.sh
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
-# ========== Brew plugins ==========
-source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-# ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=23'
-# ==================================
-
-# ========== pk10 theme ==========
-source /opt/homebrew/opt/powerlevel10k/powerlevel10k.zsh-theme
-# ================================
 
 # ========== Java ========== 
 export JAVA_8_HOME=$(/usr/libexec/java_home -v1.8)
@@ -109,10 +117,6 @@ docker() {
 source ~/.tokens.sh
 # ====================
 
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh" || true
-
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
