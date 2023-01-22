@@ -1,4 +1,4 @@
-nnoremap <silent><C-space> :Defx -columns=icons:indent:filename:type -show_ignored_files `expand('%:p:h')` -search=`expand('%:p')`<CR>
+nnoremap <silent><Leader>e :Defx -columns=icons:indent:filename:type -show_ignored_files `expand('%:p:h')` -search=`expand('%:p')`<CR>
 
 autocmd FileType defx call s:defx_my_settings()
 function! s:defx_my_settings() abort
