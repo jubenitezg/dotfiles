@@ -25,6 +25,7 @@ if has("nvim")
     Plug 'simrat39/rust-tools.nvim'
     Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
     Plug 'mbbill/undotree'
+    Plug 'rust-lang/rust.vim'
 
     " =========== LSP ===========
     " " LSP Support
