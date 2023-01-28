@@ -77,6 +77,7 @@ alias mc-ig="maccy-ignore"
 # ==================================
 
 # ========= Vim / Nvim =========
+alias vi="nvim"
 alias vim="nvim"
 # ==============================
 
