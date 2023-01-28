@@ -45,4 +45,7 @@ map sl <C-w>l
 map sc <C-w>c 
 map so <C-w>o 
 
+" No buffer
+noremap x "_x
+
 " Find more examples here: https://jb.gg/share-ideavimrc
