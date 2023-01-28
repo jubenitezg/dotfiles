@@ -3,7 +3,7 @@
 
 usage () {
     cat <<EOF
-USAGE: pomodoro.sh [OPTION] [work|rest]
+USAGE: pomodoro [OPTION] [work|rest]
   Options: 
     -h Print this help message
     -t Timer time (default: 25m work | 5m rest)
