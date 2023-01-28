@@ -1,3 +1,6 @@
+" Leader key map
+let mapleader = " "
+
 " Select all
 nmap <C-a> gg<S-v>G
 
@@ -20,3 +23,13 @@ map sl <C-w>l
 " Close windows
 map sc <C-w>c " Close current window
 map so <C-w>o " Close other windows
+
+" Explorer
+map <leader>e :Ex<CR>
+
+" Highlighting
+map <leader>nh :nohl<CR>
+
+" Black hole register
+noremap x "_x
+
