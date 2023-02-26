@@ -55,3 +55,7 @@ if exists("&termguicolors")
 endif
 autocmd vimenter * ++nested colorscheme gruvbox
 autocmd VimEnter * hi Normal ctermbg=NONE guibg=NONE
+
+" extra
+autocmd BufNewFile,BufRead *.pfc set syntax=pascal
+"
