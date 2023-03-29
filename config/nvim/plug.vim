@@ -13,6 +13,7 @@ Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
 Plug 'cohama/lexima.vim' " Autoclose pairs
 Plug 'morhetz/gruvbox'
 Plug 'udalov/kotlin-vim'
+Plug 'github/copilot.vim'
 
 if has("nvim")
     Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  } " If you have nodejs and yarn
