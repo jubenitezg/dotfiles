@@ -25,6 +25,9 @@ return require('packer').startup(function(use)
     use 'morhetz/gruvbox'
     use 'udalov/kotlin-vim'
     use 'github/copilot.vim'
+    use {"akinsho/toggleterm.nvim", tag = '*', config = function()
+      require("toggleterm").setup()
+    end}
 
     use {'iamcco/markdown-preview.nvim', run = 'cd app && yarn install'} -- If you have nodejs and yarn
     use 'hoob3rt/lualine.nvim'
