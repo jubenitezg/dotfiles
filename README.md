@@ -26,3 +26,7 @@ git clone git@github.com:JulianBenitez99/dotfiles.git ~/.dotfiles
 
 5. Restart the terminal
 
+### NVIM
+
+NVIM keys [configurations.](./config/nvim/README.md)
+
