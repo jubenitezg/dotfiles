@@ -27,7 +27,6 @@ plugins=(
   alias-finder
   fasd
   fzf
-  poetry
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -134,3 +133,8 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 # conda config --set auto_activate_base false
+
+if command -v ngrok &>/dev/null; then
+  eval "$(ngrok completion)"
+fi
+
