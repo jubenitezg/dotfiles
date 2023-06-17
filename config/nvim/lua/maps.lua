@@ -29,6 +29,10 @@ set_keymap('n', 'sl', '<C-w>l', { noremap = true, silent = true })
 set_keymap('n', 'sc', '<C-w>c', { noremap = true, silent = true }) -- Close current window
 set_keymap('n', 'so', '<C-w>o', { noremap = true, silent = true }) -- Close other windows
 
+-- Vertical movement
+set_keymap('n', '<C-d>', '<C-d>zz', { noremap = true, silent = true })
+set_keymap('n', '<C-u>', '<C-u>zz', { noremap = true, silent = true })
+
 -- Explorer
 set_keymap('n', '<leader>e', ':Ex<CR>', { noremap = true, silent = true })
 
