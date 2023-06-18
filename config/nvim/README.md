@@ -21,3 +21,10 @@ Keys (normal mode):
 
 [Key bindings](https://github.com/VonHeikemen/lsp-zero.nvim#keybindings)
 
+## Commentary.vim
+Comment out stuff. [vim-commentary](https://github.com/tpope/vim-commentary)
+
+* Comment out a line: `gcc`
+* Comment out the target of a motion: `gcap` (comment out a paragraph)
+* Visual Mode, comment out selection: `gc`
+

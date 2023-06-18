@@ -41,6 +41,7 @@ return require('packer').startup(function(use)
     }
     use 'mbbill/undotree'
     use 'rust-lang/rust.vim'
+    use 'tpope/vim-commentary'
 
     ------------ LSP -----------
     use 'neovim/nvim-lspconfig'             -- Required
