@@ -1,5 +1,0 @@
-admonition@1.0.2
-code-fold@1.4.1
-math@1.2.2
-spell-checker@2.3.0
-vim@2.2.2

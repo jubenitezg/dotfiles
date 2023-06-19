@@ -1,6 +1,6 @@
 #!/bin/bash
 
-versions_dir="$HOME/.dotfiles/versions"
+packages_dir="$HOME/.dotfiles/apps-config/inkdrop/"
 
-ipm list --installed --bare > "${versions_dir}/inkdrop.txt"
+ipm list --installed --bare > "${packages_dir}/packages.txt"
 
