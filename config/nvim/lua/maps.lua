@@ -16,25 +16,21 @@ set_keymap('v', 'J', [[:m '>+1<CR>gv=gv]], { noremap = true, silent = true })
 set_keymap('v', 'K', [[:m '<-2<CR>gv=gv]], { noremap = true, silent = true })
 
 -- Move between windows
-set_keymap('n', 's<left>', '<C-w>h', { noremap = true, silent = true })
-set_keymap('n', 's<up>', '<C-w>k', { noremap = true, silent = true })
-set_keymap('n', 's<down>', '<C-w>j', { noremap = true, silent = true })
-set_keymap('n', 's<right>', '<C-w>l', { noremap = true, silent = true })
-set_keymap('n', 'sh', '<C-w>h', { noremap = true, silent = true })
-set_keymap('n', 'sk', '<C-w>k', { noremap = true, silent = true })
-set_keymap('n', 'sj', '<C-w>j', { noremap = true, silent = true })
-set_keymap('n', 'sl', '<C-w>l', { noremap = true, silent = true })
+set_keymap('n', '<leader>sh', '<C-w>h', { noremap = true, silent = true })
+set_keymap('n', '<leader>sk', '<C-w>k', { noremap = true, silent = true })
+set_keymap('n', '<leader>sj', '<C-w>j', { noremap = true, silent = true })
+set_keymap('n', '<leader>sl', '<C-w>l', { noremap = true, silent = true })
 
 -- Close windows
-set_keymap('n', 'sc', '<C-w>c', { noremap = true, silent = true }) -- Close current window
-set_keymap('n', 'so', '<C-w>o', { noremap = true, silent = true }) -- Close other windows
+set_keymap('n', '<leader>sc', '<C-w>c', { noremap = true, silent = true }) -- Close current window
+set_keymap('n', '<leader>so', '<C-w>o', { noremap = true, silent = true }) -- Close other windows
 
 -- Vertical movement
 set_keymap('n', '<C-d>', '<C-d>zz', { noremap = true, silent = true })
 set_keymap('n', '<C-u>', '<C-u>zz', { noremap = true, silent = true })
 
 -- Explorer
-set_keymap('n', '<leader>e', ':Ex<CR>', { noremap = true, silent = true })
+set_keymap('n', '<leader>ex', ':Ex<CR>', { noremap = true, silent = true })
 
 -- Highlighting
 set_keymap('n', '<leader>nh', ':nohl<CR>', { noremap = true, silent = true })
