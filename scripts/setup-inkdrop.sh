@@ -3,7 +3,7 @@
 source ~/.zprofile
 
 setup_inkdrop() {
-  packages_file="$HOME/.dotfiles/versions/inkdrop.txt"
+  packages_file="$HOME/.dotfiles/apps-config/inkdrop/packages.txt"
   if [ -z "$packages_file" ]
   then
     echo "packages_file not found"
