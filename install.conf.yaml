@@ -50,13 +50,17 @@
       description: "Installing extra tools"
       stdout: true
     - 
-      command: scripts/vscode/extensions.sh
-      description: "Installing vscode extensions"
+      command: scripts/download-zulu.sh
+      description: "Download JDK Azul Zulu"
       stdout: true
     - 
       command: scripts/get-tokens.sh
       description: "Get all available tokens"
       stdout: true
       stdin: true
+    - 
+      command: scripts/setup-inkdrop.sh
+      description: "Setting up inkdrop plugins"
+      stdout: true
 
 

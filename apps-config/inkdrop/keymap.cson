@@ -1,0 +1,3 @@
+'body':
+  'shift-cmd-S': 'view:toggle-side-by-side'
+
