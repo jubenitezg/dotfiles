@@ -44,7 +44,6 @@ plugins=(
   alias-finder
   fasd
   fzf
-  poetry
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -56,11 +55,11 @@ source $ZSH/oh-my-zsh.sh
 # ========== Java ========== 
 export JAVA_8_HOME=$(/usr/libexec/java_home -v1.8)
 export JAVA_11_HOME=$(/usr/libexec/java_home -v11)
-export JAVA_16_HOME=$(/usr/libexec/java_home -v16)
+export JAVA_17_HOME=$(/usr/libexec/java_home -v17)
 
 alias java8='export JAVA_HOME=$JAVA_8_HOME'
 alias java11='export JAVA_HOME=$JAVA_11_HOME'
-alias java16='export JAVA_HOME=$JAVA_16_HOME'
+alias java17='export JAVA_HOME=$JAVA_17_HOME'
 
 java11
 # ==========================
@@ -82,9 +81,11 @@ export CARGO_HOME="${HOME}/.cargo"
 # ========= Custom scripts =========
 export PATH="${PATH}:${HOME}/.dotfiles/scripts/utils/bin"
 alias mc-ig="maccy-ignore"
+alias pst="pomodoro start"
 # ==================================
 
 # ========= Vim / Nvim =========
+alias vi="nvim"
 alias vim="nvim"
 # ==============================
 
@@ -100,13 +101,13 @@ export GRAPHVIZ_DOT=$(which dot)
 
 # ========= Docker =========
 # For building docker on Mac M1
-docker() {
-  if [[ `uname -m` == "arm64" ]] && [[ "$1" == "run" || "$1" == "build" ]]; then
-    /usr/local/bin/docker "$1" --platform linux/amd64 "${@:2}"
-  else
-    /usr/local/bin/docker "$@"
-  fi
-}
+#docker() {
+#  if [[ `uname -m` == "arm64" ]] && [[ "$1" == "run" || "$1" == "build" ]]; then
+#    /usr/local/bin/docker "$1" --platform linux/amd64 "${@:2}"
+#  else
+#    /usr/local/bin/docker "$@"
+#  fi
+#}
 
 # CLEAN
 # docker system prune -a --volumes
@@ -119,4 +120,25 @@ source ~/.tokens.sh
 
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/opt/homebrew/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/opt/homebrew/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/opt/homebrew/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/opt/homebrew/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+# conda config --set auto_activate_base false
+
+if command -v ngrok &>/dev/null; then
+  eval "$(ngrok completion)"
+fi
 
