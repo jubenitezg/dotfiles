@@ -1,48 +1,55 @@
-if [ "$TERMINAL_EMULATOR" != "JetBrains-JediTerm" ] && [ -n "$PS1" ] && [ -z "$TMUX" ]; then
-    ZSH_TMUX_AUTOSTART=true
-    ZSH_TMUX_AUTOCONNECT=false
-    tmux new-session -A -s main
+# Exclude tmux from auto-starting on other terminals
+if [ "$TERMINAL_EMULATOR" != "JetBrains-JediTerm" ] && [ "$TERM_PROGRAM" != "WarpTerminal" ] && [ -n "$PS1" ] && [ -z "$TMUX" ]; then
+  ZSH_TMUX_AUTOSTART=true
+  ZSH_TMUX_AUTOCONNECT=false
+  tmux new-session -A -s main
 fi 
 
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
-
-export ZSH="$HOME/.oh-my-zsh"
-
-ZSH_THEME="robbyrussell"
-
-# Standard plugins can be found in $ZSH/plugins/
-# Custom plugins may be added to $ZSH_CUSTOM/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git
   macos
-  web-search
   copypath
   copyfile
   copybuffer
   aliases
   alias-finder
   fasd
-  fzf
 )
 
+if [[ "$TERM_PROGRAM" != "WarpTerminal" ]]; then
+  
+  if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+    source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+  fi
+
+  ZSH_THEME="robbyrussell"
+
+  # ========== Brew plugins ==========
+  source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+  source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+  # ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=23'
+  # ==================================
+
+  # ========== pk10 theme ==========
+  source /opt/homebrew/opt/powerlevel10k/powerlevel10k.zsh-theme
+  # ================================
+
+  test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh" || true
+
+  # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+  [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+  plugins+=(fzf)
+  [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+fi
+
+export ZSH="$HOME/.oh-my-zsh"
 source $ZSH/oh-my-zsh.sh
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
-# ========== Brew plugins ==========
-source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-# ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=23'
-# ==================================
-
-# ========== pk10 theme ==========
-source /opt/homebrew/opt/powerlevel10k/powerlevel10k.zsh-theme
-# ================================
 
 # ========== Java ========== 
 export JAVA_8_HOME=$(/usr/libexec/java_home -v1.8)
@@ -109,13 +116,7 @@ export GRAPHVIZ_DOT=$(which dot)
 source ~/.tokens.sh
 # ====================
 
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh" || true
-set -o vi
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 
 # >>> conda initialize >>>
