@@ -22,7 +22,7 @@ git clone git@github.com:JulianBenitez99/dotfiles.git ~/.dotfiles
 ```
 
 4. For setting the iterm2 configuration, go to iterm2 `Preferences > General > Preferences` on
-`Load preferences from a custom folder or URL` add `~/.dotfiles/iterm2`
+`Load preferences from a custom folder or URL` add `~/.dotfiles/apps-config/iterm2`
 
 5. Restart the terminal
 
