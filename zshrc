@@ -1,8 +1,21 @@
+# Exclude tmux from auto-starting on other terminals
 if [ "$TERMINAL_EMULATOR" != "JetBrains-JediTerm" ] && [ "$TERM_PROGRAM" != "WarpTerminal" ] && [ -n "$PS1" ] && [ -z "$TMUX" ]; then
   ZSH_TMUX_AUTOSTART=true
   ZSH_TMUX_AUTOCONNECT=false
   tmux new-session -A -s main
 fi 
+
+# Add wisely, as too many plugins slow down shell startup.
+plugins=(
+  git
+  macos
+  copypath
+  copyfile
+  copybuffer
+  aliases
+  alias-finder
+  fasd
+)
 
 if [[ "$TERM_PROGRAM" != "WarpTerminal" ]]; then
   
@@ -10,10 +23,7 @@ if [[ "$TERM_PROGRAM" != "WarpTerminal" ]]; then
     source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
   fi
 
-  export ZSH="$HOME/.oh-my-zsh"
-
   ZSH_THEME="robbyrussell"
-  source $ZSH/oh-my-zsh.sh
 
   # ========== Brew plugins ==========
   source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
@@ -29,23 +39,12 @@ if [[ "$TERM_PROGRAM" != "WarpTerminal" ]]; then
 
   # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
   [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+  plugins+=(fzf)
+  [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 fi
 
-
-# Add wisely, as too many plugins slow down shell startup.
-plugins=(
-  git
-  macos
-  web-search
-  copypath
-  copyfile
-  copybuffer
-  aliases
-  alias-finder
-  fasd
-  fzf
-)
-
+export ZSH="$HOME/.oh-my-zsh"
 source $ZSH/oh-my-zsh.sh
 
 # Compilation flags
@@ -118,7 +117,6 @@ source ~/.tokens.sh
 # ====================
 
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 
 # >>> conda initialize >>>
