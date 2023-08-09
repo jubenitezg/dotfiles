@@ -80,7 +80,6 @@ export CARGO_HOME="${HOME}/.cargo"
 
 # ========= Custom scripts =========
 export PATH="${PATH}:${HOME}/.dotfiles/scripts/utils/bin"
-alias mc-ig="maccy-ignore"
 alias pst="pomodoro start"
 # ==================================
 
