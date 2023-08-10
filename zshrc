@@ -23,7 +23,7 @@ if [[ "$TERM_PROGRAM" != "WarpTerminal" ]]; then
     source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
   fi
 
-  ZSH_THEME="robbyrussell"
+  #ZSH_THEME="robbyrussell"
 
   # ========== Brew plugins ==========
   source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
@@ -31,20 +31,20 @@ if [[ "$TERM_PROGRAM" != "WarpTerminal" ]]; then
   # ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=23'
   # ==================================
 
-  # ========== pk10 theme ==========
-  source /opt/homebrew/opt/powerlevel10k/powerlevel10k.zsh-theme
-  # ================================
 
   test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh" || true
 
-  # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-  [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
   plugins+=(fzf)
   [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 fi
 
 export ZSH="$HOME/.oh-my-zsh"
+# ========== pk10 theme ==========
+source /opt/homebrew/opt/powerlevel10k/powerlevel10k.zsh-theme
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+# ================================
 source $ZSH/oh-my-zsh.sh
 
 # Compilation flags
