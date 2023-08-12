@@ -23,8 +23,6 @@ if [[ "$TERM_PROGRAM" != "WarpTerminal" ]]; then
     source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
   fi
 
-  #ZSH_THEME="robbyrussell"
-
   # ========== Brew plugins ==========
   source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
   source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
@@ -34,17 +32,18 @@ if [[ "$TERM_PROGRAM" != "WarpTerminal" ]]; then
 
   test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh" || true
 
-
   plugins+=(fzf)
   [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+  set -o vi
 fi
 
-export ZSH="$HOME/.oh-my-zsh"
 # ========== pk10 theme ==========
 source /opt/homebrew/opt/powerlevel10k/powerlevel10k.zsh-theme
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 # ================================
+export ZSH="$HOME/.oh-my-zsh"
 source $ZSH/oh-my-zsh.sh
 
 # Compilation flags
@@ -82,6 +81,11 @@ export PATH="${PATH}:${HOME}/.dotfiles/scripts/utils/bin"
 alias pst="pomodoro start"
 # ==================================
 
+# ========= Bat ====================
+export BAT_THEME="gruvbox-dark"
+alias cat="bat -pp"
+# ==================================
+
 # ========= Vim / Nvim =========
 alias vi="nvim"
 alias vim="nvim"
@@ -106,9 +110,6 @@ export GRAPHVIZ_DOT=$(which dot)
 #    /usr/local/bin/docker "$@"
 #  fi
 #}
-
-# CLEAN
-# docker system prune -a --volumes
 
 # ==========================
 
