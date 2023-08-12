@@ -1,11 +1,29 @@
 # This is Git's per-user configuration file.
 [user]
-        name = JulianBenitez
-        email = julian.benitezg99@gmail.com
+    name = JulianBenitez
+    email = julian.benitezg99@gmail.com
 [pull]
-        rebase = false
+    rebase = false
 [init]
-        defaultBranch = master
+    defaultBranch = master
 [core]
-        excludesfile = ~/.gitignore_global
-        editor = nvim
+    excludesfile = ~/.gitignore_global
+    editor = nvim
+    pager = diff-so-fancy | less --tabs=4 -RFX
+[interactive]
+    diffFilter = diff-so-fancy --patch
+[color "diff-highlight"]
+    oldNormal = red bold
+    oldHighlight = red bold 52
+    newNormal = green bold
+    newHighlight = green bold 22
+[color "diff"]
+    meta = 11
+    frag = magenta bold
+    func = 146 bold
+    commit = yellow bold
+    old = red bold
+    new = green bold
+    whitespace = red reverse
+[color]
+    ui = true
