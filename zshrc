@@ -100,6 +100,10 @@ autoload -Uz compinit && compinit
 export GRAPHVIZ_DOT=$(which dot)
 # ============================
 
+# ========= act =========
+alias act="act --container-architecture linux/amd64"
+# =======================
+
 
 # ========= Docker =========
 # For building docker on Mac M1
