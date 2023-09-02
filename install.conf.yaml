@@ -34,7 +34,7 @@
     ~/.tmux.conf:
       path: tmux/tmux.conf
     ~/.warp/themes:
-      path: warp/themes
+      path: apps-config/warp/themes
       force: true
 
 - shell:
