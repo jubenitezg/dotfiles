@@ -4,12 +4,9 @@ source ~/.zprofile
 
 setup_nvim() {
   echo "Installing pip3 neovim"
-  python3 -m pip install --user --upgrade neovim > /dev/null
+  python3 -m pip install --user --upgrade neovim >/dev/null
   echo "Installing pip3 pynvim"
-  python3 -m pip install --user --upgrade pynvim > /dev/null
-  echo "Installing neovim plugins"
-  nvim +PackerInstall +qall > /dev/null
+  python3 -m pip install --user --upgrade pynvim >/dev/null
 }
 
 setup_nvim
-

@@ -30,7 +30,8 @@
       path: zprofile
       force: true
     ~/.config/nvim:
-      path: config/nvim
+      path: nvim
+      create: true
     ~/.tmux.conf:
       path: tmux/tmux.conf
     ~/.warp/themes:
