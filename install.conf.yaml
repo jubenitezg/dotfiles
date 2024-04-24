@@ -62,9 +62,5 @@
       description: "Get all available tokens"
       stdout: true
       stdin: true
-    - 
-      command: scripts/setup-inkdrop.sh
-      description: "Setting up inkdrop plugins"
-      stdout: true
 
 
