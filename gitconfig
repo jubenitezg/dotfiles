@@ -1,7 +1,7 @@
 # This is Git's per-user configuration file.
 [user]
     name = JulianBenitez
-    email = julian.benitezg99@gmail.com
+    email = julian.benitezg@outlook.com
 [pull]
     rebase = false
 [init]
@@ -32,3 +32,5 @@
 	process = git-lfs filter-process
 	required = true
 	clean = git-lfs clean -- %f
+[alias]
+	change-commits = "!f() { VAR=$1; OLD=$2; NEW=$3; shift 3; git filter-branch --env-filter \"if [[ \\\"$`echo $VAR`\\\" = '$OLD' ]]; then export $VAR='$NEW'; fi\" $@; }; f"
