@@ -121,7 +121,10 @@ alias act="act --container-architecture linux/amd64"
 source ~/.tokens.sh
 # ====================
 
-
+# ====== Lazy =========
+alias lzd=lazydocker
+alias lzd=lazygit
+# ====================
 
 
 # >>> conda initialize >>>
