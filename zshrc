@@ -123,7 +123,7 @@ source ~/.tokens.sh
 
 # ====== Lazy =========
 alias lzd=lazydocker
-alias lzd=lazygit
+alias lzg=lazygit
 # ====================
 
 
