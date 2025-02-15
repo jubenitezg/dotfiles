@@ -26,7 +26,7 @@ if [[ "$TERM_PROGRAM" != "WarpTerminal" ]]; then
   # ========== Brew plugins ==========
   source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
   source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-  # ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=23'
+  # ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fcg=23'
   # ==================================
 
 
@@ -157,3 +157,5 @@ command pyenv rehash 2>/dev/null
 
 export SPATIALINDEX_C_LIBRARY='/opt/homebrew/Cellar/spatialindex/1.9.3/lib'
 eval "$(gh copilot alias -- zsh)"
+
+export MOUSE_ADDRESS="c4-0b-31-10-47-5f"
