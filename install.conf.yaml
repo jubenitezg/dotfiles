@@ -37,6 +37,9 @@
     ~/.warp/themes:
       path: apps-config/warp/themes
       force: true
+    ~/.config/ghostty/config:
+      path: apps-config/ghostty/config
+      force: true
 
 - shell:
     - 
