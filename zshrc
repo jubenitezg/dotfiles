@@ -104,6 +104,9 @@ export GRAPHVIZ_DOT=$(which dot)
 alias act="act --container-architecture linux/amd64"
 # =======================
 
+#====================
+alias gconf="vi ${HOME}/Library/Application\ Support/com.mitchellh.ghostty/config"
+#====================
 
 # ========= Docker =========
 # For building docker on Mac M1
