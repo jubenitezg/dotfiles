@@ -51,15 +51,11 @@ source $ZSH/oh-my-zsh.sh
 
 
 # ========== Java ========== 
-export JAVA_8_HOME=$(/usr/libexec/java_home -v1.8)
-export JAVA_11_HOME=$(/usr/libexec/java_home -v11)
-export JAVA_17_HOME=$(/usr/libexec/java_home -v17)
+export JAVA_21_HOME=$(/usr/libexec/java_home -v21)
 
-alias java8='export JAVA_HOME=$JAVA_8_HOME'
-alias java11='export JAVA_HOME=$JAVA_11_HOME'
-alias java17='export JAVA_HOME=$JAVA_17_HOME'
+alias java21='export JAVA_HOME=$JAVA_21_HOME'
 
-java17
+java21
 # ==========================
 
 # ========= Go =========
@@ -130,22 +126,6 @@ alias lzg=lazygit
 # ====================
 
 
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/opt/homebrew/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/opt/homebrew/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/opt/homebrew/anaconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/opt/homebrew/anaconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
-# conda config --set auto_activate_base false
-
 if command -v ngrok &>/dev/null; then
   eval "$(ngrok completion)"
 fi
@@ -161,4 +141,3 @@ command pyenv rehash 2>/dev/null
 export SPATIALINDEX_C_LIBRARY='/opt/homebrew/Cellar/spatialindex/1.9.3/lib'
 eval "$(gh copilot alias -- zsh)"
 
-export MOUSE_ADDRESS="c4-0b-31-10-47-5f"
