@@ -4,3 +4,5 @@
 local opt = vim.opt
 
 opt.clipboard = nil
+
+vim.g.root_spec = { "cwd" }
