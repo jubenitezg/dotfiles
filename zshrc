@@ -125,6 +125,10 @@ alias lzd=lazydocker
 alias lzg=lazygit
 # ====================
 
+# ==================== pico-8 ========== 
+alias p8c="cd ${HOME}/Library/Application\ Support/pico-8/carts"
+# ====================================== 
+
 
 if command -v ngrok &>/dev/null; then
   eval "$(ngrok completion)"
