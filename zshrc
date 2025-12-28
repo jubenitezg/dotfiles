@@ -49,6 +49,9 @@ source $ZSH/oh-my-zsh.sh
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
+# Alias
+alias rt="echo $?"
+
 
 # ========== Java ========== 
 export JAVA_21_HOME=$(/usr/libexec/java_home -v21)
@@ -144,4 +147,13 @@ command pyenv rehash 2>/dev/null
 
 export SPATIALINDEX_C_LIBRARY='/opt/homebrew/Cellar/spatialindex/1.9.3/lib'
 eval "$(gh copilot alias -- zsh)"
+
+export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
+
+[ -f "/Users/jbenitezg/.ghcup/env" ] && . "/Users/jbenitezg/.ghcup/env" # ghcup-env
+
+
+clear_cargo_targets() {
+  find ~/Documents/GitHub -name Cargo.toml -type f -prune -exec echo "In {}" \; -exec cargo clean --manifest-path {} \;
+}
 
