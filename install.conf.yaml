@@ -40,6 +40,9 @@
     ~/.config/ghostty/config:
       path: apps-config/ghostty/config
       force: true
+    ~/.config/zed:
+      path: apps-config/zed
+      force: true
 
 - shell:
     - 
@@ -61,5 +64,4 @@
       description: "Get all available tokens"
       stdout: true
       stdin: true
-
 
