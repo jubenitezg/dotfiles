@@ -34,6 +34,7 @@ if [[ "$TERM_PROGRAM" != "WarpTerminal" ]]; then
 
   plugins+=(fzf)
   [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+  source <(fzf --zsh)
 
   set -o vi
 fi
@@ -146,7 +147,13 @@ export PATH="/Users/jbenitezg/.pyenv/shims:${PATH}"
 command pyenv rehash 2>/dev/null
 
 export SPATIALINDEX_C_LIBRARY='/opt/homebrew/Cellar/spatialindex/1.9.3/lib'
-eval "$(gh copilot alias -- zsh)"
+
+# ============================ gh =======================================
+if gh extension list 2>/dev/null | grep -q 'github/gh-copilot'; then
+  eval "$(gh copilot alias -- zsh)"
+fi
+export EDITOR=nvim
+# ============================ gh =======================================
 
 export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
 
