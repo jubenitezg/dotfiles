@@ -7,6 +7,9 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
+  "edit_predictions": {
+    "provider": "none"
+  },
   "theme": "JetBrains Dark",
   "ui_font_size": 16,
   "buffer_font_size": 16,
@@ -17,9 +20,6 @@
     "env": {
       "ZED_TERMINAL": "1"
     }
-  },
-  "features": {
-    "edit_prediction_provider": "none"
   },
   "agent": {
     "enabled": false,
