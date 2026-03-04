@@ -32,8 +32,9 @@
     ~/.config/nvim:
       path: nvim
       create: true
-    ~/.tmux.conf:
+    ~/.config/tmux/tmux.conf:
       path: tmux/tmux.conf
+      create: true
     ~/.warp/themes:
       path: apps-config/warp/themes
       force: true
