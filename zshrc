@@ -19,9 +19,9 @@ plugins=(
 
 if [[ "$TERM_PROGRAM" != "WarpTerminal" ]]; then
   
-  if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-    source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-  fi
+  # if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  #   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+  # fi
 
   # ========== Brew plugins ==========
   source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
@@ -40,9 +40,9 @@ if [[ "$TERM_PROGRAM" != "WarpTerminal" ]]; then
 fi
 
 # ========== pk10 theme ==========
-source /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme
+# source /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+# [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 # ================================
 export ZSH="$HOME/.oh-my-zsh"
 source $ZSH/oh-my-zsh.sh
@@ -164,3 +164,5 @@ clear_cargo_targets() {
   find ~/Documents/GitHub -name Cargo.toml -type f -prune -exec echo "In {}" \; -exec cargo clean --manifest-path {} \;
 }
 
+### Starship
+eval "$(starship init zsh)"

@@ -43,6 +43,8 @@
     ~/.config/zed:
       path: apps-config/zed
       force: true
+    ~/.config/starship.toml:
+      path: apps-config/starship.toml
 
 - shell:
     - 
