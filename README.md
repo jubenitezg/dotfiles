@@ -28,7 +28,3 @@ git clone git@github.com:jubenitezg/dotfiles.git ~/.dotfiles
 `Load preferences from a custom folder or URL` add `~/.dotfiles/apps-config/iterm2`
 
 5. Restart the terminal
-
-### NVIM
-
-NVIM keys [configurations.](./config/nvim/README.md)
