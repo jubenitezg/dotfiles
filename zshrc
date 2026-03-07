@@ -147,7 +147,11 @@ export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
 
 
 clear_cargo_targets() {
-  find ~/Documents/GitHub -name Cargo.toml -type f -prune -exec echo "In {}" \; -exec cargo clean --manifest-path {} \;
+  if [[ -z "$1" ]]; then
+    echo "Usage: clear_cargo_targets <dir>"
+    return 1
+  fi
+  find "$1" -name Cargo.toml -type f -prune -exec echo "In {}" \; -exec cargo clean --manifest-path {} \;
 }
 
 ### Starship
