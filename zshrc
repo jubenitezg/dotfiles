@@ -30,7 +30,6 @@ if [[ "$TERM_PROGRAM" != "WarpTerminal" ]]; then
   # ==================================
 
 
-  plugins+=(fzf)
   source <(fzf --zsh)
 
   set -o vi
