@@ -1,0 +1,35 @@
+# Core
+git
+git-lfs
+gh
+
+# Shell & Prompt
+oh-my-posh
+neovim
+fzf
+ripgrep
+bat
+fd
+jq
+wget
+tree
+curl
+
+# Productivity
+lazygit
+lazydocker
+tig
+
+# Fonts (Nerd Font for icons + OMP)
+nerd-fonts-firacode
+
+# Languages
+golang
+rustup.install
+nvm
+python
+
+# Dev Tools
+cmake
+llvm
+make
