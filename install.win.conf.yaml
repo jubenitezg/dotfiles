@@ -1,0 +1,31 @@
+- defaults:
+    link:
+      relink: true
+      create: true
+    shell:
+      quiet: true
+
+- shell:
+    - command: pwsh -File scripts/windows/pre-install.ps1
+      description: "Installing Chocolatey, tools & PowerShell modules"
+      stdout: true
+      stdin: true
+
+- link:
+    ~/Documents/PowerShell/Microsoft.PowerShell_profile.ps1:
+      path: windows/Microsoft.PowerShell_profile.ps1
+      force: true
+    ~/Documents/PowerShell/oh-my-posh:
+      path: windows/oh-my-posh
+      force: true
+    ~/.gitconfig: gitconfig
+    ~/.gitignore_global: gitignore_global
+    ~/.ideavimrc: ideavimrc
+    ~/AppData/Local/nvim:
+      path: nvim
+      create: true
+
+- shell:
+    - command: pwsh -File scripts/windows/setup-git.ps1
+      description: "Setting up git configurations"
+      stdout: true
