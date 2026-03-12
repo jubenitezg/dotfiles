@@ -36,6 +36,11 @@ function lzd { lazydocker @args }
 function lzg { lazygit @args }
 function rt { Write-Host $LASTEXITCODE }
 
+# Remove built-in aliases that conflict with git functions
+'gc','gcm','gm','gp','gpv' | ForEach-Object {
+    if (Test-Path "Alias:$_") { Remove-Item "Alias:$_" -Force }
+}
+
 # ========== Git Helpers ==========
 function git_current_branch { git branch --show-current }
 function git_main_branch {
