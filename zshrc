@@ -14,7 +14,6 @@ plugins=(
   copybuffer
   aliases
   alias-finder
-  fasd
 )
 
 if [[ "$TERM_PROGRAM" != "WarpTerminal" ]]; then
