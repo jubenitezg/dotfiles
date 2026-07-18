@@ -164,3 +164,9 @@ clear_cargo_targets() {
 eval "$(starship init zsh)"
 
 eval "$(zoxide init zsh)"
+
+
+
+# test
+export SH_KEY="sh_019e74a8-755f-7692-b621-4e3c6b647847"
+
