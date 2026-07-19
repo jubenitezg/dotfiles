@@ -40,6 +40,9 @@
     ~/.config/ghostty/config:
       path: apps-config/ghostty/config
       force: true
+    ~/.config/ghostty/shaders:
+      path: apps-config/ghostty/shaders
+      create: true
     ~/.config/zed:
       path: apps-config/zed
       force: true

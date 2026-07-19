@@ -4,3 +4,6 @@ theme=Catppuccin Mocha
 mouse-hide-while-typing=true
 font-size=16
 
+# Custom shader — drop .glsl files in shaders/ then uncomment and point here
+#custom-shader = shaders/crt-shader-with-chromatic-aberration-glow-scanlines-dot-matrix.glsl
+
