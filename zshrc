@@ -51,6 +51,7 @@ fi
 
 # Alias
 alias rt="echo $?"
+alias lf=leaf
 
 
 # ========== Java ==========
@@ -67,6 +68,7 @@ export GOBIN=$GOPATH/bin
 export PATH=$PATH:$GOBIN
 export GOOS="darwin"
 export GOARCH="arm64"
+export GOPRIVATE=github.com/jubenitezg/*
 # ======================
 
 # ========= Rust =========
@@ -105,18 +107,6 @@ alias act="act --container-architecture linux/amd64"
 #====================
 alias gconf="vi ~/.config/ghostty/config"
 #====================
-
-# ========= Docker =========
-# For building docker on Mac M1
-#docker() {
-#  if [[ `uname -m` == "arm64" ]] && [[ "$1" == "run" || "$1" == "build" ]]; then
-#    /usr/local/bin/docker "$1" --platform linux/amd64 "${@:2}"
-#  else
-#    /usr/local/bin/docker "$@"
-#  fi
-#}
-
-# ==========================
 
 # ====== Tokens ======
 source ~/.tokens.sh
@@ -164,4 +154,3 @@ clear_cargo_targets() {
 eval "$(starship init zsh)"
 
 eval "$(zoxide init zsh)"
-
